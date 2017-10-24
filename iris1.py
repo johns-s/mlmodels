@@ -1,4 +1,4 @@
-from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.datasets import load_iris
 iris = load_iris()
 
@@ -8,7 +8,7 @@ lab = iris.target
 from sklearn.cross_validation import train_test_split
 xtrain, xtest, ytrain, ytest = train_test_split(feat,lab,test_size=.2)
 
-clf = DecisionTreeClassifier()
+clf = RandomForestClassifier()
 clf.fit(xtrain, ytrain)
  
 p = clf.predict(xtest)
